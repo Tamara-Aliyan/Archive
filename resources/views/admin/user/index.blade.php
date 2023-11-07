@@ -49,6 +49,9 @@ User
                     <th>#</th>
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Image</th>
+                    <th>Birthday</th>
                 </tr>
             </thead>
             <tbody>
@@ -59,6 +62,9 @@ User
                     <td>{{ $i }}</td>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
+                    <td>{{ $user->mobile }}</td>
+                    <td>{{ $user->img }}</td>
+                    <td>{{ $user->birthday }}</td>
                 </tr>
 
                 @endforeach
