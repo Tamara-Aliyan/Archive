@@ -1,10 +1,13 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\KeywordController;
 use App\Http\Controllers\ProfileController;
+use App\Models\File;
+use App\Models\Keyword;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +24,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+// Route::get('/users', function () {
+//     $userCount = User::count();
+//     return view('userCount', ['userCount' => $userCount]);
+// });
+
 Route::get('/dashboard', function () {
-    return view('admin.dashboard');
+    $userCount = User::count();
+    $keywordCount = Keyword::count();
+    $fileCount = File::count();
+    return view('admin.dashboard',['userCount' => $userCount , 'keywordCount' => $keywordCount , 'fileCount' => $fileCount]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

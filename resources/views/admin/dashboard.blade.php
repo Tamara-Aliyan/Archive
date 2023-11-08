@@ -41,6 +41,58 @@ Dashboard
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-xl-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <h5 class="text-muted fw-normal mt-0 text-truncate" title="Campaign Sent">Total Files</h5>
+                            <h3 class="my-2 py-1">Files</h3>
+                            <p class="mb-0 text-muted">
+                                <span class="text-success me-2"><i class="mdi mdi-arrow-up-bold"></i>{{ $fileCount }}</span>
+                            </p>
+                        </div>
+
+                    </div> <!-- end row-->
+                </div> <!-- end card-body -->
+            </div> <!-- end card -->
+        </div> <!-- end col -->
+
+        <div class="col-lg-6 col-xl-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <h5 class="text-muted fw-normal mt-0 text-truncate" title="Deals">Total KeyWords</h5>
+                            <h3 class="my-2 py-1">KeyWords</h3>
+                            <p class="mb-0 text-muted">
+                                <span class="text-success me-2"><i class="mdi mdi-arrow-up-bold"></i>{{ $keywordCount }}</span>
+                            </p>
+                        </div>
+                    </div> <!-- end row-->
+                </div> <!-- end card-body -->
+            </div> <!-- end card -->
+        </div> <!-- end col -->
+
+        <div class="col-lg-6 col-xl-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <h5 class="text-muted fw-normal mt-0 text-truncate" title="Booked Revenue">Total Users</h5>
+                            <h3 class="my-2 py-1">Users</h3>
+                            <p class="mb-0 text-muted">
+                                <span class="text-success me-2"><i class="mdi mdi-arrow-up-bold"></i>{{ $userCount }}</span>
+                            </p>
+                        </div>
+                    </div> <!-- end row-->
+                </div> <!-- end card-body -->
+            </div> <!-- end card -->
+        </div> <!-- end col -->
+    </div>
+    <!-- end row -->
 @endsection
 
 @section('script')
